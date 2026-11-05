@@ -22,14 +22,14 @@
 | `docs/OVERVIEW.md` | 定位、当前工作及导航 |
 | `docs/state/` | 已采用的产品预期，独立于形成历史 |
 | `docs/changes/` | 初始形成、调整及其依据 |
-| `docs/investigations/` | 有版本与证据范围的长期调查记录 |
-| `docs/.temp/` | 忽略的本地计划、源码副本、实验和原始日志 |
+| `docs/.temp/investigations/` | 忽略的调查记录与候选设计 |
+| `docs/.temp/` 其余材料 | 忽略的本地计划、源码副本、实验和原始日志 |
 
 本次未选择评估数据模型、评分协议、存储布局或 sandbox 实现路线，也未创建占位 API、npm 发布配置或指定项目许可证。候选设计先由调查与后续具体用例推进。
 
 ## 调查与独立检查
 
-[调查报告](../investigations/pi-tool-gateway.md)以公开提交 `638cdecdeae7758f334a2a59e76f6c2f03f85efd` 为依据。它保存执行路径、宿主可信域、Native fallback、持久化差异和 pi-durable / MAS 对照。
+本地调查 `docs/.temp/investigations/pi-tool-gateway.md` 以公开提交 `638cdecdeae7758f334a2a59e76f6c2f03f85efd` 为依据。它保存执行路径、宿主可信域、Native fallback、持久化差异和 pi-durable / MAS 对照。
 
 独立安装、类型检查与打包预览完成。Windows 全量测试为 **169 通过、3 失败、0 跳过**；三个失败发生在宿主 symlink 夹具创建，独立对照复现 `EPERM`，未进入对应 gateway 检查。报告保留该缺口，不采用上游 172 项全通过记录作为本次结果。
 
@@ -37,4 +37,6 @@
 
 ## 接续
 
-初始化和调查交付到此完成。候选接入方向与需要用户决定的评估关系见[后续设计入口](../investigations/pi-tool-gateway.md#后续设计入口)，不随本次初始化自动采用。
+用户随后明确调查应放在 `docs/.temp/investigations/`。据此将原先纳入跟踪的调查迁回忽略目录，并修正入口与文档约定；Git 历史保留初始化时的记录。候选接入方向和评估关系继续在本地调查中发展，不随本次初始化自动采用。
+
+2026-11-05 的[范围调整](2026-11-05-environment-infrastructure.md)随后弃用 evaluation infrastructure 定位与 pakka-mas 强依赖。上文保留初始化时的要求；当前职责以产品预期为准。

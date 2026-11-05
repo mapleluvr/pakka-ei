@@ -1,0 +1,32 @@
+{
+  "name": "@pakka/ei",
+  "version": "0.1.0-dev.0",
+  "private": true,
+  "description": "Pakka environment infrastructure",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.mjs"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md",
+    "docs/OVERVIEW.md",
+    "docs/state",
+    "docs/guides",
+    "docs/changes"
+  ],
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "benchmark": "node scripts/benchmark-files.mjs"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@microsoft/mxc-sdk": "1.0.1"
+  }
+}

@@ -1,16 +1,37 @@
-# pakka-ei
+# 文档总览
 
-面向 pi-durable、依赖 pakka-mas 的轻量级个人评估基础设施，独立发布和维护。
+pakka-ei 为 Agent 运行时提供独立的 environment infrastructure，以宿主授权、执行能力和资源生命周期连接具体环境与使用方。
 
-## 阅读入口
+## 按用途阅读
 
-- [产品预期](state/product.md)：已明确的定位与依赖关系。
-- [初始化记录](changes/2026-11-04-initialize-project.md)：要求来源、仓库初始化范围及调查结果入口。
-- [Pi Tool Gateway 调查](investigations/pi-tool-gateway.md)：固定源码版本、Windows 独立复跑、隔离边界及候选接入方向。
-- `docs/.temp/active-plan.md`：本地执行安排；外部源码、实验及原始输出同放忽略目录。正式调查可脱离该目录阅读。
+| 需要了解                                | 入口                                                                                                                                    |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 项目定位、运行条件和可直接运行的示例    | [README](../README.md)                                                                                                                  |
+| 已采用的产品职责和集成关系              | [产品预期](state/product.md)                                                                                                            |
+| 文件 owner 的能力、输入、身份与失败契约 | [MXC 文件服务](state/mxc-files.md)                                                                                                      |
+| 如何取得、使用、关闭及接入 Pakka        | [使用指南](guides/MXC-FILES.md)                                                                                                         |
+| 如何安装、测试、测量和检查实际归档      | [开发指南](guides/DEVELOPMENT.md)                                                                                                       |
+| 文件复用的采用依据和固定结果            | [常驻文件服务记录](changes/2026-11-05-persistent-files.md)                                                                              |
+| 定位调整和仓库来路                      | [environment infrastructure 调整](changes/2026-11-05-environment-infrastructure.md)、[初始化](changes/2026-11-04-initialize-project.md) |
+| 对外文档的组织与发布准备                | [文档整理记录](changes/2026-11-05-public-repository.md)                                                                                 |
 
-## 当前工作
+## 当前工作与后续设计
 
-仓库初始化与 gateway 调查已完成；尚无评估运行器实现。下一项设计工作是选取一条具体评估用例，明确被测对象、评分依据、协作关系与执行权限，再确定 pi-durable / pakka-mas 的版本及接入契约。
+文件组件已有可安装源码、公开类型、使用指南与固定回归记录。仓库发布工作按[文档整理记录](changes/2026-11-05-public-repository.md)衔接。
 
-待决定的问题和建议的最小试验见[调查结尾](investigations/pi-tool-gateway.md#后续设计入口)。这些候选内容尚未转为 `state/` 中的已采用架构。
+完整环境的下一轮设计需要解决以下问题，尚未作为现有文件组件的 API：
+
+- **命令执行**：每次命令的独立进程、输出通道和后代进程取消/退出确认。
+- **owner 管理**：持久登记目标与槽位，区分正常关闭与未知结果，明确重新取得和人工裁定的条件。
+- **授权模型**：处理跨根硬链接及可变共享目录的对象别名边界，不能以直接路径拒绝代替对象隔离证明。
+- **Pakka 接缝**：初始化取消、缓存环境的存续健康，以及恢复到待执行工具时的环境取得失败路径。
+
+上述工作以[文件服务契约](state/mxc-files.md)和[使用指南](guides/MXC-FILES.md)为已有条件，进一步方案须经过具体试验和采用。文件组件的验证范围见[固定记录](verification/persistent-files-2026-11-05-final/README.md)。
+
+## 文档分工
+
+- `docs/state/` 独立描述已采用的当前对象与契约。
+- `docs/guides/` 说明操作、判据和排错条件。
+- `docs/changes/` 保存要求、取舍和调整的形成过程。
+- `docs/verification/` 保存带版本与范围的结果快照，按记录的身份核对。
+- `docs/.temp/` 是本地忽略的计划、调查与试验区；公开使用路径及后续问题不以它作为唯一依据。

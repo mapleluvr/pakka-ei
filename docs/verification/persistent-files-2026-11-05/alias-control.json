@@ -1,0 +1,100 @@
+{
+  "root": "C:\\Users\\mapleland\\AppData\\Local\\Temp\\pakka-ei-file-jxcSWa",
+  "node": "v24.15.0",
+  "results": [
+    {
+      "action": "read",
+      "path": "C:\\Users\\mapleland\\AppData\\Local\\Temp\\pakka-ei-file-jxcSWa\\denied\\secret",
+      "cold": {
+        "ok": false,
+        "code": "EPERM"
+      },
+      "afterCold": "READONLY",
+      "warm": {
+        "ok": false,
+        "error": {
+          "code": "permission_denied",
+          "message": "EPERM: operation not permitted, open 'C:\\Users\\mapleland\\AppData\\Local\\Temp\\pakka-ei-file-jxcSWa\\denied\\secret'"
+        }
+      },
+      "afterWarm": "READONLY"
+    },
+    {
+      "action": "read",
+      "path": "deny-junction/secret",
+      "cold": {
+        "ok": false,
+        "code": "EPERM"
+      },
+      "afterCold": "READONLY",
+      "warm": {
+        "ok": false,
+        "error": {
+          "code": "permission_denied",
+          "message": "EPERM: operation not permitted, open 'C:\\Users\\mapleland\\AppData\\Local\\Temp\\pakka-ei-file-jxcSWa\\work\\deny-junction\\secret'"
+        }
+      },
+      "afterWarm": "READONLY"
+    },
+    {
+      "action": "read",
+      "path": "deny-hardlink",
+      "cold": {
+        "ok": true,
+        "value": "DENIED"
+      },
+      "afterCold": "READONLY",
+      "warm": {
+        "ok": true,
+        "value": "DENIED"
+      },
+      "afterWarm": "READONLY"
+    },
+    {
+      "action": "write",
+      "path": "C:\\Users\\mapleland\\AppData\\Local\\Temp\\pakka-ei-file-jxcSWa\\ro\\sentinel",
+      "cold": {
+        "ok": false,
+        "code": "EPERM"
+      },
+      "afterCold": "READONLY",
+      "warm": {
+        "ok": false,
+        "error": {
+          "code": "permission_denied",
+          "message": "EPERM: operation not permitted, open 'C:\\Users\\mapleland\\AppData\\Local\\Temp\\pakka-ei-file-jxcSWa\\ro\\sentinel'"
+        }
+      },
+      "afterWarm": "READONLY"
+    },
+    {
+      "action": "write",
+      "path": "ro-junction/sentinel",
+      "cold": {
+        "ok": false,
+        "code": "EPERM"
+      },
+      "afterCold": "READONLY",
+      "warm": {
+        "ok": false,
+        "error": {
+          "code": "permission_denied",
+          "message": "EPERM: operation not permitted, open 'C:\\Users\\mapleland\\AppData\\Local\\Temp\\pakka-ei-file-jxcSWa\\work\\ro-junction\\sentinel'"
+        }
+      },
+      "afterWarm": "READONLY"
+    },
+    {
+      "action": "write",
+      "path": "ro-hardlink",
+      "cold": {
+        "ok": true
+      },
+      "afterCold": "COLD",
+      "warm": {
+        "ok": true
+      },
+      "afterWarm": "WARM"
+    }
+  ]
+}

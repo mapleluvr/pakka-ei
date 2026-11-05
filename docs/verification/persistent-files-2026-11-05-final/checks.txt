@@ -1,0 +1,6 @@
+Checks performed on 2026-11-05, Windows x64, Node v24.15.0.
+TypeScript 7.0.2: installed cross-package public API strict check passed (external declarations skipped); standalone EI index.d.ts strict check passed without skipLibCheck. See consumer.txt.
+All src/test/scripts *.mjs files passed node --check. scripts/verify-pakka.ps1 passed PowerShell Parser.ParseFile with zero errors.
+Runtime identity: all six measured, installed and working source SHA-256 values matched. Installed index.d.ts bytes matched the working declaration.
+Active LSP: six requested paths, zero confirmed clean, all six timed out (inconclusive). An empty diagnostic list is NOT a successful check. Concurrency=2; waitMs=2000.
+Paths: src/index.d.ts, src/mxc/lease.mjs, src/mxc/facade.mjs, src/mxc/channel.mjs, src/mxc/file-worker.mjs, src/mxc/protocol.mjs.

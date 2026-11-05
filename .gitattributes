@@ -6,3 +6,5 @@
 *.ps1 text eol=lf
 .gitignore text eol=lf
 .gitattributes text eol=lf
+# Fixed evidence retains captured bytes, including CRLF and console padding.
+docs/verification/** -text -whitespace

@@ -1,0 +1,31 @@
+
+added 8 packages in 2m
+{
+  "root": "C:\\Users\\mapleland\\AppData\\Local\\Temp\\ei-pakka-proof-rv7atf",
+  "source": {
+    "index.mjs": "2e6da38b98df4dcd089a6e1e71bb003fd717bd054cf6e87b7eb7513546e438f3",
+    "mxc/lease.mjs": "e5f5e7cbb0559602fa34460a3f9de642964763d0903430f3c998141466d323ac",
+    "mxc/facade.mjs": "1ed58c32f5609d96dda5d4e09c39c8f15d4588157a2bdc65f39275fdf5d542b2",
+    "mxc/channel.mjs": "3857757e11dc30ccb7e3693aa22def3e97fba43b0011066f6c3c18ab4b44d238",
+    "mxc/file-worker.mjs": "ff157205b2c56a4860440a037c00deea497fc049535cd1bfc6043bff8ec0881c",
+    "mxc/protocol.mjs": "257c1d0d66d03de9f567ef37e3671f42d9790705c6f12e18099368abec47efab"
+  },
+  "http": 5,
+  "leases": 1,
+  "file": "NEW\r\n保留",
+  "reader": "保留",
+  "permissionDenied": true,
+  "unavailableExec": true,
+  "revokedAccess": true,
+  "cleanup": "closed",
+  "reopened": true
+}
+Installed public API type check passed (skipLibCheck applies to external declarations).
+EI declarations passed without skipLibCheck.
+Consumer: C:\Users\mapleland\AppData\Local\Temp\ei-installed-TjhDd4
+
+Path                                                                                          Hash
+----                                                                                          ----
+C:\Users\mapleland\AppData\Local\Temp\ei-installed-TjhDd4\pakka-ei-0.1.0-dev.0.tgz            6EB36E8D9BB25857250D4626C…
+C:\Users\mapleland\AppData\Local\Temp\pakka-env-consumer-install-iAumjs\pakka-agent-0.7.0.tgz F169CB32F9E2B7A5BF4C75960…
+
