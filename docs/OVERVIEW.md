@@ -17,7 +17,7 @@ pakka-ei 为 Agent 运行时提供独立的 environment infrastructure，以宿�
 
 ## 当前工作与后续设计
 
-文件组件已有可安装源码、公开类型、使用指南与固定回归记录。仓库发布工作按[文档整理记录](changes/2026-11-05-public-repository.md)衔接。
+文件组件已有可安装源码、公开类型、使用指南与固定回归记录。仓库发布工作按[文档整理记录](changes/2026-11-05-public-repository.md)衔接；原始验证材料已按[本地保全与摘要整理](changes/2026-11-12-verification-evidence.md)移出正式交付树，历史结果与源码身份不变。
 
 完整环境的下一轮设计需要解决以下问题，尚未作为现有文件组件的 API：
 
@@ -33,5 +33,5 @@ pakka-ei 为 Agent 运行时提供独立的 environment infrastructure，以宿�
 - `docs/state/` 独立描述已采用的当前对象与契约。
 - `docs/guides/` 说明操作、判据和排错条件。
 - `docs/changes/` 保存要求、取舍和调整的形成过程。
-- `docs/verification/` 保存带版本与范围的结果快照，按记录的身份核对。
+- `docs/verification/` 仅保存候选、环境、范围、实际结果、限制及完整本地证据包整体 SHA-256；原始日志、样本和逐文件清单仅本地保全。
 - `docs/.temp/` 是本地忽略的计划、调查与试验区；公开使用路径及后续问题不以它作为唯一依据。
